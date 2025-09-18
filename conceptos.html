@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SGBD – Conceptos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo SGBD" />
+        <span>SGBD</span>
+      </div>
+      <div class="menu">
+        <a href="index.html"  >Inicio</a>
+        <a href="conceptos.html"  style="text-decoration:underline">Conceptos</a>
+        <a href="modelos.html"  >Modelos</a>
+        <a href="acid-base-cap.html"  >ACID vs BASE/CAP</a>
+        <a href="ejemplos.html" class="btn" >Ejemplos</a>
+        <a href="galeria.html"  >Galería</a>
+        <a href="recursos.html"  >Recursos</a>
+        <a href="contacto.html"  >Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    
+<section class="grid">
+  <h2>Conceptos esenciales</h2>
+  <div class="cards">
+    <article class="card">
+      <img src="images/mysql.svg" alt="BD" style="width:100%; border-radius:12px; margin-bottom:10px"/>
+      <h3>Base de Datos</h3><p>Colección organizada de datos relacionados.</p>
+    </article>
+    <article class="card">
+      <img src="images/postgresql.svg" alt="SGBD" style="width:100%; border-radius:12px; margin-bottom:10px"/>
+      <h3>SGBD</h3><p>Software para definir, consultar y administrar datos.</p>
+    </article>
+    <article class="card">
+      <img src="images/sqlserver.svg" alt="Índices" style="width:100%; border-radius:12px; margin-bottom:10px"/>
+      <h3>Índices</h3><p>Aceleran consultas (B-Tree, Hash) con costo en inserciones.</p>
+    </article>
+    <article class="card">
+      <img src="images/oracle.svg" alt="Normalización" style="width:100%; border-radius:12px; margin-bottom:10px"/>
+      <h3>Normalización</h3><p>Reduce redundancia (1FN, 2FN, 3FN, BCNF).</p>
+    </article>
+    <article class="card">
+      <img src="images/mongodb.svg" alt="Transacciones" style="width:100%; border-radius:12px; margin-bottom:10px"/>
+      <h3>Transacciones</h3><p>Unidad lógica de trabajo con garantías ACID.</p>
+    </article>
+    <article class="card">
+      <img src="images/redis.svg" alt="Replicación" style="width:100%; border-radius:12px; margin-bottom:10px"/>
+      <h3>Replicación/Particionado</h3><p>Escalabilidad y alta disponibilidad.</p>
+    </article>
+  </div>
+</section>
+
+  </main>
+  <footer>
+    © <span id="year"></span> SGBD Demo • HTML/CSS/JS.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  
+</body>
+</html>

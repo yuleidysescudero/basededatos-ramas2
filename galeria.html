@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SGBD – Galería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo SGBD" />
+        <span>SGBD</span>
+      </div>
+      <div class="menu">
+        <a href="index.html"  >Inicio</a>
+        <a href="conceptos.html"  >Conceptos</a>
+        <a href="modelos.html"  >Modelos</a>
+        <a href="acid-base-cap.html"  >ACID vs BASE/CAP</a>
+        <a href="ejemplos.html" class="btn" >Ejemplos</a>
+        <a href="galeria.html"  style="text-decoration:underline">Galería</a>
+        <a href="recursos.html"  >Recursos</a>
+        <a href="contacto.html"  >Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    
+<section class="grid">
+  <h2>Galería</h2>
+  <p>Iconos ilustrativos para usar en tus clases o presentaciones.</p>
+  <div class="gallery">
+    <div class="thumb"><img src="images/mysql.svg" alt="MySQL"></div>
+    <div class="thumb"><img src="images/postgresql.svg" alt="PostgreSQL"></div>
+    <div class="thumb"><img src="images/sqlserver.svg" alt="SQL Server"></div>
+    <div class="thumb"><img src="images/oracle.svg" alt="Oracle"></div>
+    <div class="thumb"><img src="images/mongodb.svg" alt="MongoDB"></div>
+    <div class="thumb"><img src="images/redis.svg" alt="Redis"></div>
+    <div class="thumb"><img src="images/cassandra.svg" alt="Cassandra"></div>
+    <div class="thumb"><img src="images/neo4j.svg" alt="Neo4j"></div>
+    <div class="thumb"><img src="images/timescale.svg" alt="TimescaleDB"></div>
+    <div class="thumb"><img src="images/hbase.svg" alt="HBase"></div>
+  </div>
+</section>
+
+  </main>
+  <footer>
+    © <span id="year"></span> SGBD Demo • HTML/CSS/JS.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  
+</body>
+</html>
