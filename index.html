@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SGBD – Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo SGBD" />
+        <span>SGBD</span>
+      </div>
+      <div class="menu">
+        <a href="index.html"  style="text-decoration:underline">Inicio</a>
+        <a href="conceptos.html"  >Conceptos</a>
+        <a href="modelos.html"  >Modelos</a>
+        <a href="acid-base-cap.html"  >ACID vs BASE/CAP</a>
+        <a href="ejemplos.html" class="btn" >Ejemplos</a>
+        <a href="galeria.html"  >Galería</a>
+        <a href="recursos.html"  >Recursos</a>
+        <a href="contacto.html"  >Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    
+<section class="hero">
+  <div>
+    <span class="badge">Guía moderna • Diseño responsive</span>
+    <h1>Sistemas de Gestión de Bases de Datos (SGBD)</h1>
+    <p>Explora fundamentos, modelos y ejemplos populares con recursos visuales.</p>
+    <div class="mini">
+      <img src="images/mysql.svg" alt="MySQL"/>
+      <img src="images/postgresql.svg" alt="PostgreSQL"/>
+      <img src="images/sqlserver.svg" alt="SQL Server"/>
+      <img src="images/oracle.svg" alt="Oracle"/>
+      <img src="images/mongodb.svg" alt="MongoDB"/>
+      <img src="images/redis.svg" alt="Redis"/>
+    </div>
+  </div>
+  <div class="card" style="padding:20px; display:grid; place-items:center">
+    <img src="images/server.svg" alt="Servidor DB" style="max-width:460px; width:100%; height:auto"/>
+  </div>
+</section>
+<section class="grid">
+  <div class="kpis">
+    <div class="kpi card"><div class="badge">Objetivo</div><p>Almacenamiento y acceso confiable a datos.</p></div>
+    <div class="kpi card"><div class="badge">Usuarios</div><p>Desarrolladores, DBAs, analistas y científicos de datos.</p></div>
+    <div class="kpi card"><div class="badge">Beneficios</div><p>ACID, concurrencia, respaldo y seguridad.</p></div>
+  </div>
+</section>
+
+  </main>
+  <footer>
+    © <span id="year"></span> SGBD Demo • HTML/CSS/JS.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  
+</body>
+</html>
