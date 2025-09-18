@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SGBD – Recursos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo SGBD" />
+        <span>SGBD</span>
+      </div>
+      <div class="menu">
+        <a href="index.html"  >Inicio</a>
+        <a href="conceptos.html"  >Conceptos</a>
+        <a href="modelos.html"  >Modelos</a>
+        <a href="acid-base-cap.html"  >ACID vs BASE/CAP</a>
+        <a href="ejemplos.html" class="btn" >Ejemplos</a>
+        <a href="galeria.html"  >Galería</a>
+        <a href="recursos.html"  style="text-decoration:underline">Recursos</a>
+        <a href="contacto.html"  >Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    
+<section class="grid">
+  <h2>Recursos</h2>
+  <div class="cards">
+    <article class="card">
+      <h3>SQL Básico</h3>
+      <pre style="overflow:auto; background:#0a142e; padding:14px; border-radius:12px; border:1px solid #203055"><code>-- Consulta de ejemplo
+SELECT c.nombre, SUM(f.total) AS ventas
+FROM clientes c
+JOIN facturas f ON f.id_cliente = c.id
+GROUP BY c.nombre
+ORDER BY ventas DESC;</code></pre>
+    </article>
+    <article class="card">
+      <h3>Buenas Prácticas</h3>
+      <ul>
+        <li>Tipos correctos y restricciones (PK, FK, UNIQUE, CHECK).</li>
+        <li>Indexa campos consultados frecuentemente.</li>
+        <li>Evita SELECT * en producción.</li>
+        <li>Respaldos y pruebas de recuperación.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+  </main>
+  <footer>
+    © <span id="year"></span> SGBD Demo • HTML/CSS/JS.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SGBD – Modelos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo SGBD" />
+        <span>SGBD</span>
+      </div>
+      <div class="menu">
+        <a href="index.html"  >Inicio</a>
+        <a href="conceptos.html"  >Conceptos</a>
+        <a href="modelos.html"  style="text-decoration:underline">Modelos</a>
+        <a href="acid-base-cap.html"  >ACID vs BASE/CAP</a>
+        <a href="ejemplos.html" class="btn" >Ejemplos</a>
+        <a href="galeria.html"  >Galería</a>
+        <a href="recursos.html"  >Recursos</a>
+        <a href="contacto.html"  >Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    
+<section class="grid">
+  <h2>Modelos de datos (con iconos)</h2>
+  <div class="cards">
+    <article class="card"><img src="images/postgresql.svg" alt="Relacional" class="banner" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>Relacional (SQL)</h3><p>Tablas, PK/FK, SQL.</p></article>
+    <article class="card"><img src="images/redis.svg" alt="Clave-Valor" class="banner" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>Clave‑Valor</h3><p>Pares simples; muy rápido.</p></article>
+    <article class="card"><img src="images/mongodb.svg" alt="Documentos" class="banner" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>Documentos</h3><p>JSON/BSON flexible.</p></article>
+    <article class="card"><img src="images/cassandra.svg" alt="Columnar" class="banner" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>Columnar</h3><p>Lecturas analíticas masivas.</p></article>
+    <article class="card"><img src="images/neo4j.svg" alt="Grafos" class="banner" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>Grafos</h3><p>Nodos y aristas.</p></article>
+    <article class="card"><img src="images/timescale.svg" alt="Time Series" class="banner" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>Time‑Series</h3><p>Métricas con timestamp.</p></article>
+  </div>
+</section>
+
+  </main>
+  <footer>
+    © <span id="year"></span> SGBD Demo • HTML/CSS/JS.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  
+</body>
+</html>

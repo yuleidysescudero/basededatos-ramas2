@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SGBD – ACID vs BASE/CAP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo SGBD" />
+        <span>SGBD</span>
+      </div>
+      <div class="menu">
+        <a href="index.html"  >Inicio</a>
+        <a href="conceptos.html"  >Conceptos</a>
+        <a href="modelos.html"  >Modelos</a>
+        <a href="acid-base-cap.html"  style="text-decoration:underline">ACID vs BASE/CAP</a>
+        <a href="ejemplos.html" class="btn" >Ejemplos</a>
+        <a href="galeria.html"  >Galería</a>
+        <a href="recursos.html"  >Recursos</a>
+        <a href="contacto.html"  >Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    
+<section class="grid">
+  <h2>ACID vs BASE y Teorema CAP</h2>
+  <div class="cards">
+    <article class="card">
+      <img src="images/postgresql.svg" alt="ACID" style="width:100%; border-radius:12px; margin-bottom:10px"/>
+      <h3>ACID</h3>
+      <ul>
+        <li><b>Atomicidad</b>: todo o nada.</li>
+        <li><b>Consistencia</b>: reglas válidas.</li>
+        <li><b>Aislamiento</b>: sin interferencias.</li>
+        <li><b>Durabilidad</b>: cambios persisten.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <img src="images/mongodb.svg" alt="BASE" style="width:100%; border-radius:12px; margin-bottom:10px"/>
+      <h3>BASE</h3>
+      <ul>
+        <li>Básicamente Disponible</li>
+        <li>Estado Suave</li>
+        <li>Consistencia Eventual</li>
+      </ul>
+    </article>
+    <article class="card" style="display:grid; place-items:center; padding:10px 10px 0">
+      <img src="images/cap.svg" alt="Triángulo CAP" style="max-width:420px; width:100%; height:auto"/>
+    </article>
+  </div>
+</section>
+
+  </main>
+  <footer>
+    © <span id="year"></span> SGBD Demo • HTML/CSS/JS.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  
+</body>
+</html>

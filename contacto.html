@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SGBD – Contacto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo SGBD" />
+        <span>SGBD</span>
+      </div>
+      <div class="menu">
+        <a href="index.html"  >Inicio</a>
+        <a href="conceptos.html"  >Conceptos</a>
+        <a href="modelos.html"  >Modelos</a>
+        <a href="acid-base-cap.html"  >ACID vs BASE/CAP</a>
+        <a href="ejemplos.html" class="btn" >Ejemplos</a>
+        <a href="galeria.html"  >Galería</a>
+        <a href="recursos.html"  >Recursos</a>
+        <a href="contacto.html"  style="text-decoration:underline">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    
+<section class="grid">
+  <h2>Contacto</h2>
+  <p>¿Tienes preguntas o quieres más recursos para tus clases? Escríbeme usando el formulario.</p>
+  <form id="contactForm" class="form" action="#" method="post">
+    <div class="mini">
+      <img src="images/mysql.svg" alt="MySQL"/>
+      <img src="images/postgresql.svg" alt="PostgreSQL"/>
+      <img src="images/mongodb.svg" alt="MongoDB"/>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <div>
+        <label for="nombre">Nombre</label>
+        <input class="input" type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input class="input" type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+      </div>
+    </div>
+    <label for="asunto">Asunto</label>
+    <input class="input" type="text" id="asunto" name="asunto" required placeholder="Consulta sobre SGBD">
+    <label for="mensaje">Mensaje</label>
+    <textarea class="input" id="mensaje" name="mensaje" rows="6" required placeholder="Escribe tu mensaje..."></textarea>
+    <button type="submit" class="btn">Enviar</button>
+    <div id="alerta" class="alert">Mensaje listo para enviar ✅ (se abrirá tu cliente de correo).</div>
+  </form>
+</section>
+
+  </main>
+  <footer>
+    © <span id="year"></span> SGBD Demo • HTML/CSS/JS.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  
+<script>
+  const form = document.getElementById('contactForm');
+  const alertBox = document.getElementById('alerta');
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const asunto = document.getElementById('asunto').value.trim() || 'Consulta desde el sitio SGBD';
+    const mensaje = document.getElementById('mensaje').value.trim();
+    if(!(nombre && email && mensaje)){ return; }
+    const body = encodeURIComponent(`Nombre: ${nombre}\nEmail: ${email}\n\n${mensaje}`);
+    const mailto = `mailto:profesor@example.com?subject=${encodeURIComponent(asunto)}&body=${body}`;
+    alertBox.style.display = 'block';
+    window.location.href = mailto;
+  });
+</script>
+
+</body>
+</html>

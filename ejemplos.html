@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SGBD – Ejemplos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo SGBD" />
+        <span>SGBD</span>
+      </div>
+      <div class="menu">
+        <a href="index.html"  >Inicio</a>
+        <a href="conceptos.html"  >Conceptos</a>
+        <a href="modelos.html"  >Modelos</a>
+        <a href="acid-base-cap.html"  >ACID vs BASE/CAP</a>
+        <a href="ejemplos.html" class="btn" style="text-decoration:underline">Ejemplos</a>
+        <a href="galeria.html"  >Galería</a>
+        <a href="recursos.html"  >Recursos</a>
+        <a href="contacto.html"  >Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    
+<section class="grid">
+  <h2>Ejemplos populares (con imágenes)</h2>
+  <div class="cards">
+    <article class="card"><img src="images/postgresql.svg" alt="PostgreSQL" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>PostgreSQL</h3><p>Relacional avanzado, JSONB, PostGIS.</p></article>
+    <article class="card"><img src="images/mysql.svg" alt="MySQL" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>MySQL / MariaDB</h3><p>Amplio uso, InnoDB.</p></article>
+    <article class="card"><img src="images/sqlserver.svg" alt="SQL Server" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>SQL Server</h3><p>T‑SQL, BI.</p></article>
+    <article class="card"><img src="images/oracle.svg" alt="Oracle" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>Oracle</h3><p>RAC, particionado.</p></article>
+    <article class="card"><img src="images/mongodb.svg" alt="MongoDB" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>MongoDB</h3><p>Documentos y agregaciones.</p></article>
+    <article class="card"><img src="images/redis.svg" alt="Redis" style="width:100%; border-radius:12px; margin-bottom:10px"/><h3>Redis</h3><p>Estructuras en memoria, cache.</p></article>
+  </div>
+</section>
+
+<section class="grid">
+  <h3 style="margin-top:24px">Comparativa rápida</h3>
+  <table class="table" aria-label="Tabla comparativa de SGBD">
+    <thead><tr><th>SGBD</th><th>Modelo</th><th>Escalado</th><th>Transacciones</th><th>Casos de uso</th></tr></thead>
+    <tbody>
+      <tr><td>PostgreSQL</td><td>Relacional</td><td>Vertical + Réplicas</td><td>ACID</td><td>OLTP, GIS</td></tr>
+      <tr><td>MySQL</td><td>Relacional</td><td>Vertical + Réplicas</td><td>ACID</td><td>Web, e‑commerce</td></tr>
+      <tr><td>SQL Server</td><td>Relacional</td><td>Vertical + AlwaysOn</td><td>ACID</td><td>BI/Enterprise</td></tr>
+      <tr><td>Oracle</td><td>Relacional</td><td>RAC/Cluster</td><td>ACID</td><td>Finanzas</td></tr>
+      <tr><td>MongoDB</td><td>Documentos</td><td>Horizontal (sharding)</td><td>ACID multi‑doc*</td><td>Contenido</td></tr>
+      <tr><td>Redis</td><td>Clave‑valor</td><td>Horizontal</td><td>Transaccional simple</td><td>Cache/colas</td></tr>
+    </tbody>
+  </table>
+  <p style="color:#9fb3c8; font-size:13px">* Verifica límites por versión/cluster.</p>
+</section>
+
+  </main>
+  <footer>
+    © <span id="year"></span> SGBD Demo • HTML/CSS/JS.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  
+</body>
+</html>
